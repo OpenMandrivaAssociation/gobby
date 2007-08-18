@@ -10,6 +10,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 BuildRequires:  libnet6-devel libobby-devel gtkmm2.4-devel
 BuildRequires:  gtksourceview-devel libxml++-devel
 BuildRequires:  pkgconfig(gtksourceview-1.0)
+BuildRequires:  pkgconfig(avahi-glib)
 BuildRequires:  ImageMagick 
 %description
 Gobby is a free collaborative editor based on libobby, a library which provides
