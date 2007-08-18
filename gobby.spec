@@ -1,6 +1,6 @@
 Name:           gobby
-Version:        0.4.1
-Release:        %mkrel 2
+Version:        0.4.4
+Release:        %mkrel 1
 Summary:        A free collaborative editor
 Group:          Editors
 License:        GPL
@@ -9,6 +9,7 @@ Source0:        http://releases.0x539.de/%{name}/%{name}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 BuildRequires:  libnet6-devel libobby-devel gtkmm2.4-devel
 BuildRequires:  gtksourceview-devel libxml++-devel
+BuildRequires:  pkgconfig(gtksourceview-1.0)
 BuildRequires:  ImageMagick 
 %description
 Gobby is a free collaborative editor based on libobby, a library which provides
@@ -59,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc ChangeLog AUTHORS README NEWS TODO
+%doc ChangeLog AUTHORS README NEWS
 %_bindir/*
 %_liconsdir/%{name}.png
 %_iconsdir/%{name}.png
