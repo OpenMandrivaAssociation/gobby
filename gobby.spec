@@ -1,9 +1,9 @@
 Name:           gobby
 Version:        0.4.5
-Release:        %mkrel 2
+Release:        %mkrel 3
 Summary:        A free collaborative editor
 Group:          Editors
-License:        GPL
+License:        GPLv2+
 URL:            http://gobby.0x539.de/
 Source0:        http://releases.0x539.de/%{name}/%{name}-%{version}.tar.bz2 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root
@@ -41,9 +41,8 @@ Exec=%{_bindir}/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-MoreApplications-Editors;TextEditor;
+Categories=TextEditor;Utility;GTK;
 EOF
-
 
 mkdir -p $RPM_BUILD_ROOT/%_iconsdir 
 mkdir -p $RPM_BUILD_ROOT/%_liconsdir 
@@ -74,4 +73,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %postun
 %{clean_menus}
-
