@@ -1,11 +1,11 @@
 Name:           gobby
-Version:        0.4.5
-Release:        %mkrel 3
+Version:        0.4.6
+Release:        %mkrel 1
 Summary:        A free collaborative editor
 Group:          Editors
 License:        GPLv2+
 URL:            http://gobby.0x539.de/
-Source0:        http://releases.0x539.de/%{name}/%{name}-%{version}.tar.bz2 
+Source0:        http://releases.0x539.de/%{name}/%{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 BuildRequires:  libnet6-devel libobby-devel gtkmm2.4-devel
 BuildRequires:  gtksourceview-devel libxml++-devel
