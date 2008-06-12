@@ -68,8 +68,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pixmaps/*
 %{_mandir}/man1/*
 
+%if %mdkversion < 200900
 %post
 %{update_menus}
+%endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
+%endif
