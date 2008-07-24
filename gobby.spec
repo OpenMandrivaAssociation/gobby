@@ -1,6 +1,6 @@
 Name:           gobby
 Version:        0.4.6
-Release:        %mkrel 1
+Release:        %mkrel 3
 Summary:        A free collaborative editor
 Group:          Editors
 License:        GPLv2+
