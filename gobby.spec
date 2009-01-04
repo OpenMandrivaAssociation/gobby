@@ -13,6 +13,7 @@ BuildRequires:  gtksourceview-devel libxml++-devel
 BuildRequires:  pkgconfig(gtksourceview-1.0)
 BuildRequires:  pkgconfig(avahi-glib)
 BuildRequires:  imagemagick 
+BuildRequires:	intltool
 
 %description
 Gobby is a free collaborative editor based on libobby, a library which provides
