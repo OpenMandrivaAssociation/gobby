@@ -1,5 +1,5 @@
 Name:           gobby
-Version:        0.4.8
+Version:        0.4.9
 Release:        %mkrel 1
 Summary:        A free collaborative editor
 Group:          Editors
@@ -46,14 +46,6 @@ Type=Application
 Categories=TextEditor;Utility;GTK;
 EOF
 
-mkdir -p $RPM_BUILD_ROOT/%_iconsdir 
-mkdir -p $RPM_BUILD_ROOT/%_liconsdir 
-mkdir -p $RPM_BUILD_ROOT/%_miconsdir 
-
-convert contrib/artwork/%{name}.svg -geometry 48x48 $RPM_BUILD_ROOT%_liconsdir/%{name}.png
-convert contrib/artwork/%{name}.svg -geometry 32x32 $RPM_BUILD_ROOT%_iconsdir/%{name}.png
-convert contrib/artwork/%{name}.svg -geometry 16x16 $RPM_BUILD_ROOT%_miconsdir/%{name}.png
-
 %find_lang %{name}
 
 %clean
@@ -63,9 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc ChangeLog AUTHORS README NEWS
 %_bindir/*
-%_liconsdir/%{name}.png
-%_iconsdir/%{name}.png
-%_miconsdir/%{name}.png
+%_iconsdir/*/*/*/*
 %{_datadir}/applications/*
 %{_datadir}/pixmaps/*
 %{_mandir}/man1/*
