@@ -1,6 +1,6 @@
 Name:           gobby
-Version:        0.4.10
-Release:        %mkrel 2
+Version:        0.4.11
+Release:        %mkrel 1 
 Summary:        A free collaborative editor
 Group:          Editors
 License:        GPLv2+
@@ -57,8 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog AUTHORS README NEWS
 %_bindir/*
 %_iconsdir/*/*/*/*
+%{_datadir}/gobby/icons/*/*
 %{_datadir}/applications/*
-%{_datadir}/pixmaps/*
 %{_mandir}/man1/*
 
 %if %mdkversion < 200900
