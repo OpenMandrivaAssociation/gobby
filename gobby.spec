@@ -1,12 +1,11 @@
 Name:           gobby
-Version:        0.4.11
-Release:        %mkrel 1 
+Version:        0.4.13
+Release:        1 
 Summary:        A free collaborative editor
 Group:          Editors
 License:        GPLv2+
 URL:            http://gobby.0x539.de/
 Source0:        http://releases.0x539.de/gobby/%{name}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 BuildRequires:	libobby-devel >= 0.4.6
 BuildRequires:  libnet6-devel libobby-devel gtkmm2.4-devel
 BuildRequires:  gtksourceview-devel libxml++-devel
@@ -32,11 +31,10 @@ GNOME desktop environment.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+mkdir -p %buildroot%{_datadir}/applications
+cat > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=Gobby
 Comment=A free collaborative editor
@@ -49,24 +47,10 @@ EOF
 
 %find_lang %{name}
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc ChangeLog AUTHORS README NEWS
 %_bindir/*
 %_iconsdir/*/*/*/*
 %{_datadir}/gobby/icons/*/*
 %{_datadir}/applications/*
 %{_mandir}/man1/*
-
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%endif
