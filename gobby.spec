@@ -4,7 +4,7 @@ Release:        1
 Summary:        A free collaborative editor
 Group:          Editors
 License:        GPLv2+
-URL:            http://gobby.0x539.de/
+URL:            https://gobby.0x539.de/
 Source0:        http://releases.0x539.de/gobby/%{name}-%{version}.tar.gz
 BuildRequires:	libobby-devel >= 0.4.6
 BuildRequires:  libnet6-devel libobby-devel gtkmm2.4-devel
