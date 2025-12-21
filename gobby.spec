@@ -6,6 +6,11 @@ Group:          Editors
 License:        GPLv2+
 URL:            https://gobby.0x539.de/
 Source0:        http://releases.0x539.de/gobby/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libobby-devel >= 0.4.6
 BuildRequires:  libnet6-devel libobby-devel gtkmm2.4-devel
 BuildRequires:  gtksourceview-devel libxml++-devel
